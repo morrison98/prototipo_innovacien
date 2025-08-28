@@ -21,7 +21,7 @@ def listar_archivos_keras_github(user, repo, path=""):
     if r.status_code != 200:
         return []
     items = r.json()
-    keras_files = [file['name'] for file in data if file['name'].endswith('.keras')]
+    keras_files = [file for file in items if file['name'].endswith('.keras')]
     return [{"name": i["name"], "download_url": i["download_url"]} for i in keras_files]
 
 
@@ -166,6 +166,7 @@ st.markdown(
     "- Si el tamaño del modelo es distinto a 64×64, la app intenta **leer `input_shape`** para redimensionar correctamente.\n"
     "- El archivo recomendado es **`.keras`** (Keras 3 / TF 2.19+)."
 )
+
 
 
 
