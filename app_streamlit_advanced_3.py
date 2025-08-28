@@ -10,7 +10,7 @@ from tensorflow.keras.models import load_model
 
 # Datos fijos del repositorio GitHub con modelos .keras
 GITHUB_USER = "morrison98"
-GITHUB_REPO = "prototipoinnovacien"  # corregido sin guión bajo extra
+GITHUB_REPO = "prototipo_innovacien"  # corregido sin guión bajo extra
 GITHUB_PATH = "main"  # Cambia si tus modelos están en una subcarpeta del repo
 
 
@@ -166,4 +166,5 @@ st.markdown(
     "- Si el tamaño del modelo es distinto a 64×64, la app intenta **leer `input_shape`** para redimensionar correctamente.\n"
     "- El archivo recomendado es **`.keras`** (Keras 3 / TF 2.19+)."
 )
+
 
