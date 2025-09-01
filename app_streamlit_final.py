@@ -51,7 +51,7 @@ def load_keras_model_safely(path: str):
 
 
 st.set_page_config(page_title="Clasificación Histopatología", page_icon="🧫", layout="centered")
-st.title("🧫 Clasificación de Histopatología (IDC vs No IDC)")
+st.title("Clasificación de Histopatología (IDC vs No IDC)")
 st.caption("Sube un parche (PNG/JPG). La app cargará tu modelo .keras y preprocesará la imagen de forma consistente.")
 
 # Lista los modelos .keras disponibles en el repo GitHub fijo
@@ -166,6 +166,7 @@ st.markdown(
     "- Si el tamaño del modelo es distinto a 64×64, la app intenta **leer `input_shape`** para redimensionar correctamente.\n"
     "- El archivo recomendado es **`.keras`** (Keras 3 / TF 2.19+)."
 )
+
 
 
 
