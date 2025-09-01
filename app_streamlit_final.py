@@ -16,7 +16,7 @@ GITHUB_PATH = ""  # Cambia si tus modelos están en una subcarpeta del repo
 
 @st.cache_data(ttl=600)
 def listar_archivos_keras_github(user, repo, path=""):
-    api_url = f"https://api.github.com/repos/{user}/{repo}/contents/{path}"
+    api_url = f"https://api.github.com/repos/{user}/{repo}/{path}"
     r = requests.get(api_url)
     if r.status_code != 200:
         return []
@@ -166,6 +166,7 @@ st.markdown(
     "- Si el tamaño del modelo es distinto a 64×64, la app intenta **leer `input_shape`** para redimensionar correctamente.\n"
     "- El archivo recomendado es **`.keras`** (Keras 3 / TF 2.19+)."
 )
+
 
 
 
